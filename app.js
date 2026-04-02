@@ -28,7 +28,10 @@ function addProject() {
   save();
   render();
 }
-
+function logout() {
+  localStorage.removeItem("loggedIn");
+  window.location.href = "login.html";
+}
 function removeProject(index) {
   projects.splice(index, 1);
   save();
